@@ -1,28 +1,22 @@
 import setuptools
-from os import path
 
-this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
-DATA_FILES = ['img/new_loss.png']
-
+long_description = ''
 
 install_requires = [
     'numpy',
     'scikit-learn',
     'tqdm',
-    #'torch',
+    #'torch >= 1.6.0', # todo torch-gpu
     #'torchvision',
-    ],
+]
 
-
+extras_requires = None
 
 setuptools.setup(
     name="ptranking",
-    version="0.3",
+    version="0.0.1",
     author="II-Research",
-    author_email="example@example.com",
+    author_email="yuhaitao@slis.tsukuba.ac.jp",
     description="A library of scalable and extendable implementations of typical learning-to-rank methods based on PyTorch.",
     license="MIT License",
     keywords=['Learning-to-rank', 'PyTorch'],
@@ -36,6 +30,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires = install_requires,
-    data_files = DATA_FILES
+    install_requires=install_requires,
+    extras_require=extras_requires
 )
+
+#todo package_data

@@ -32,7 +32,8 @@ All specific learning-to-rank models inherit NeuralRanker and mainly differ in t
  where batch_preds and batch_stds correspond to outputs of the scoring function and ground-truth lables, respectively. 
  We can observe that the main work is to define the surrogate loss function.
 
-![](https://github.com/ptranking/ptranking.github.io/raw/master/img/new_loss.png)
+![NewLoss](./img/new_loss.png)
+
 ## Parameter Setting
 
 An easy-to-use parameter setting is necessary for any ML library. PT-Ranking offers a self-contained strategy.
@@ -46,9 +47,9 @@ To fully leverage PT-Ranking, one needs to [be familiar with PyTorch](https://py
 
 For detailed introduction on learning-to-rank, please refer to the book: [Learning to Rank for Information Retrieval](https://link.springer.com/book/10.1007/978-3-642-14267-3).
 
-## Source Codes
+## API Document
 
-Please refer to the [GitHub Repository](https://github.com/ptranking/ptranking.github.io) for PTRanking's implementation details.
+Please refer to [Learning to Rank in the Wild](https://wildltr.github.io) for details of each component (under construction).
 
 # List of implemented models & References
 
@@ -167,6 +168,21 @@ Ubuntu 16.04 LTS
 
 We are adding more learning-to-rank models all the time. Please submit an issue if there is something you want to have implemented and included. Meanwhile, 
 anyone who are interested in any kinds of contributions and/or collaborations are warmly welcomed.
+
+# Citation
+
+If you use PTRanking in your research, please use the following BibTex entry.
+
+```
+@misc{yu2020ptranking,
+    title={PT-Ranking: A Benchmarking Platform for Neural Learning-to-Rank},
+    author={Hai-Tao Yu},
+    year={2020},
+    eprint={2008.13368},
+    archivePrefix={arXiv},
+    primaryClass={cs.IR}
+}
+```
 
 # Relevant Resources
 
