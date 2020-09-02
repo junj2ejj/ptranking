@@ -7,6 +7,7 @@
 """
 import torch
 import numpy as np
+import os
 
 from ptranking.ltr_global import ltr_seed
 from ptranking.ltr_adhoc.eval.ltr import LTREvaluator
@@ -47,7 +48,7 @@ if __name__ == '__main__':
 	#data_id = 'MQ2008_Super'
 
 	''' location of the adopted data '''
-	dir_data = '/Users/dryuhaitao/WorkBench/Corpus/' + 'LETOR4.0/MQ2007/'
+	dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../WorkBench/Corpus/LETOR4.0/MQ2007/')))
 	#dir_data = '/home/dl-box/WorkBench/Datasets/L2R/LETOR4.0/MQ2007/'
 	#dir_data = '/Users/solar/WorkBench/Datasets/L2R/LETOR4.0/MQ2008/'
 
@@ -61,7 +62,7 @@ if __name__ == '__main__':
 	#dir_data = '/home/dl-box/WorkBench/Datasets/L2R/ISTELLA_L2R/Istella_S/'
 
 	''' output directory '''
-	dir_output = '/Users/dryuhaitao/WorkBench/CodeBench/Bench_Output/NeuralLTR/Listwise/'
+	dir_output = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../WorkBench/CodeBench/Bench_Output/NeuralLTR/Listwise/')))
 	#dir_output = '/home/dl-box/WorkBench/CodeBench/PyCharmProject/Project_output/Out_L2R/Listwise/'
 	#dir_output = '/Users/solar/WorkBench/CodeBench/PyCharmProject/Project_output/Out_L2R/'
 

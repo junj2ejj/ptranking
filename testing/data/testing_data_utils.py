@@ -4,6 +4,7 @@
 """Description
 Examples on how to use data_utils module
 """
+import os
 
 from ptranking.data.data_utils import LTRDataset, YAHOO_LTR, ISTELLA_LTR
 import torch
@@ -96,7 +97,7 @@ def check_dataset_statistics(data_id, dir_data, buffer=False):
             file_train, file_test = data_prefix + 'train.txt', data_prefix + 'test.txt'
     else:
         fold_k = 1
-        fold_k_dir = dir_data + 'Fold' + str(fold_k) + '/'
+        fold_k_dir = dir_data + '/' + 'Fold' + str(fold_k) + '/'
         file_train, file_vali, file_test = fold_k_dir + 'train.txt', fold_k_dir + 'vali.txt', fold_k_dir + 'test.txt'
 
     # common
@@ -214,7 +215,9 @@ if __name__ == '__main__':
     #check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
 
     data_id  = 'MQ2007_List'
-    dir_data = '/Users/solar/WorkBench/Datasets/L2R/LETOR4.0/MQ2007-list/'
+    dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../dataset/MQ2007-list/')))
+    path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), "../../dataset/MQ2007-list/")))
+    print("loading from" + path)
     check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
     '''
     Dataset:	 MQ2007_List
@@ -228,7 +231,7 @@ if __name__ == '__main__':
     '''
 
     data_id  = 'MQ2008_List'
-    dir_data = '/Users/solar/WorkBench/Datasets/L2R/LETOR4.0/MQ2008-list/'
+    dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../dataset/MQ2008-list/')))
     check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
     '''
     Dataset:	 MQ2008_List
