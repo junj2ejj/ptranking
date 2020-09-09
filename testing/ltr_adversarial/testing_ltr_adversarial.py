@@ -14,7 +14,7 @@ import numpy as np
 from ptranking.ltr_global import ltr_seed
 from ptranking.ltr_adversarial.eval.ltr_adversarial import AdLTREvaluator
 
-from ptranking.utils import settings
+from ptranking import settings
 
 np.random.seed(seed=ltr_seed)
 torch.manual_seed(seed=ltr_seed)
