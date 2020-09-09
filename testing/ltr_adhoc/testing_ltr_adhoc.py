@@ -12,7 +12,7 @@ import os
 from ptranking.ltr_global import ltr_seed
 from ptranking.ltr_adhoc.eval.ltr import LTREvaluator
 
-from ptranking.utils import settings
+from ptranking import settings
 
 np.random.seed(seed=ltr_seed)
 torch.manual_seed(seed=ltr_seed)
