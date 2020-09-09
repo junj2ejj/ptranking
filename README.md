@@ -20,7 +20,7 @@ This open-source project, referred to as **PTRanking** (Learning to Rank in PyTo
 
 ### Command line usage
 
-1. 
+1. Download Supported Dataset(s) [Reference](#dataset)
 
 2. Run codes below in your Terminal/Command Prompt:
 
@@ -37,7 +37,7 @@ python ptranking -data MQ2008_Super -dir_data /Users/jackh/PycharmProjects/ptran
 
 ### Testing via example codes
 
-1. Download 4 compressed files (`MQ2007.rar`, `MQ2007-list.rar`, `MQ2008.rar` and `MQ2008-list.rar`) of LETOR 4.0 datasets from https://onedrive.live.com/?cid=8feadc23d838bda8&id=8FEADC23D838BDA8%21107&authkey=%21ACnoZZSZVfHPJd0 and uncompress them respectively under `DATASET_DIR`
+1. Download 4 compressed dataset files (`MQ2007.rar`, `MQ2007-list.rar`, `MQ2008.rar` and `MQ2008-list.rar`) of LETOR 4.0 datasets from https://onedrive.live.com/?cid=8feadc23d838bda8&id=8FEADC23D838BDA8%21107&authkey=%21ACnoZZSZVfHPJd0 and uncompress them respectively under `DATASET_DIR`
 
 2. Set the Data Directories
 In `ptranking/utils/settings.py` set the `DATASET_DIR`, `PROJECT_OUTPUT_DIR` and `BENCH_OUTPUT_DIR` to different directories
@@ -84,9 +84,9 @@ This is for github
 -->
 <!--
 This is for pypi
+-->
 ![](https://github.com/ptranking/ptranking.github.io/raw/master/img/new_loss.png)
 
--->
 ## Parameter Setting
 
 An easy-to-use parameter setting is necessary for any ML library. PT-Ranking offers a self-contained strategy.
@@ -155,7 +155,7 @@ Please refer to [Learning to Rank in the Wild](https://wildltr.github.io) for de
 
 - Bruch, Sebastian and Han, Shuguang and Bendersky, Michael and Najork, Marc. A Stochastic Treatment of Learning to Rank Scoring Functions. Proceedings of the 13th International Conference on Web Search and Data Mining (WSDM), 61–69, 2020. 
 
-# Supported Datasets and Formats
+# <span id="dataset">Supported Datasets and Formats</span>
 
 ## The widely used benchmark datasets listed below can be directly used once downloaded
 
