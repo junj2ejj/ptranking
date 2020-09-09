@@ -16,9 +16,7 @@ This open-source project, referred to as **PTRanking** (Learning to Rank in PyTo
 
 1. Prepare a virtual Python 3.8 environment via `conda`, `venv` or others and install `ptranking` (e.g. pip install ptranking)
 
-2. Install Pytorch follows the instruction in https://pytorch.org/get-started/locally/
-
-3. Install scikit-learn follows the instruction in https://scikit-learn.org/stable/install.html#installation-instructions
+2. Install pytorch follows the instruction in https://pytorch.org/get-started/locally/
 
 ### Command line usage
 
@@ -34,19 +32,17 @@ e.g.:
 ```
 python ptranking -data MQ2008_Super -dir_data /home/dl-box/dataset/MQ2008/ -dir_output /home/dl-box/WorkBench/CodeBench/Project_output/Out_L2R/Listwise/ -model ListMLE
 ```
-<!--
+
 python ptranking -data MQ2008_Super -dir_data /Users/jackh/PycharmProjects/ptranking/dataset/MQ2008/ -dir_output /Users/jackh/PycharmProjects/ptranking/WorkBench/CodeBench/Project_output/Out_L2R/Listwise/ -model ListMLE
--->
+
 ### Testing via example codes
 
-1. Download the project and enter into the root directory of `ptranking`
+1. Download 4 compressed dataset files (`MQ2007.rar`, `MQ2007-list.rar`, `MQ2008.rar` and `MQ2008-list.rar`) of LETOR 4.0 datasets from https://onedrive.live.com/?cid=8feadc23d838bda8&id=8FEADC23D838BDA8%21107&authkey=%21ACnoZZSZVfHPJd0 and uncompress them respectively under `DATASET_DIR`
 
-2. Download 4 compressed example LETOR 4.0 dataset files (`MQ2007.rar`, `MQ2007-list.rar`, `MQ2008.rar` and `MQ2008-list.rar`) from https://onedrive.live.com/?cid=8feadc23d838bda8&id=8FEADC23D838BDA8%21107&authkey=%21ACnoZZSZVfHPJd0 and uncompress them respectively under `DATASET_DIR`
+2. Set the Data Directories
+In `ptranking/utils/settings.py` set the `DATASET_DIR`, `PROJECT_OUTPUT_DIR` and `BENCH_OUTPUT_DIR` to different directories
 
-3. Set the Data Directories
-In `ptranking/settings.py` set the `DATASET_DIR`, `PROJECT_OUTPUT_DIR` and `BENCH_OUTPUT_DIR` to different directories
-
-4. Run codes below in your Terminal/Command Prompt:
+3. Run codes below in your Terminal/Command Prompt:
 
 ```
 

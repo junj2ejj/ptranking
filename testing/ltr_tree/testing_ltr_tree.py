@@ -12,7 +12,7 @@ import numpy as np
 from ptranking.ltr_global import ltr_seed
 from ptranking.ltr_tree.eval.ltr_tree import TreeLTREvaluator
 
-from ptranking import settings
+from ptranking.utils import settings
 
 np.random.seed(seed=ltr_seed)
 
