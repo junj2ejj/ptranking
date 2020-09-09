@@ -5,11 +5,14 @@
 """Description
 
 """
+import os
 
 import numpy as np
 
 from ptranking.ltr_global import ltr_seed
 from ptranking.ltr_tree.eval.ltr_tree import TreeLTREvaluator
+
+from ptranking.utils import settings
 
 np.random.seed(seed=ltr_seed)
 
@@ -40,7 +43,7 @@ if __name__ == '__main__':
     ''' selected dataset & location of the adopted data '''
     data_id = 'MQ2008_Super'
 
-    dir_data = '/home/dl-box/WorkBench/Datasets/L2R/LETOR4.0/MQ2008/'
+    dir_data = os.path.join(settings.DATASET_DIR, 'MQ2008/')
     #dir_data = '/Users/solar/WorkBench/Datasets/L2R/LETOR4.0/MQ2008/'
 
     #data_id  = 'Istella_S'
@@ -49,7 +52,7 @@ if __name__ == '__main__':
     ''' output directory '''
     #dir_output = '/Users/dryuhaitao/WorkBench/CodeBench/Bench_Output/NeuralLTR/Listwise/'
     #dir_output = '/home/dl-box/WorkBench/CodeBench/PyCharmProject/Project_output/Out_L2R/Listwise/'
-    dir_output = '/Users/solar/WorkBench/CodeBench/PyCharmProject/Project_output/Out_L2R/'
+    dir_output = os.path.join(settings.PROJECT_OUTPUT_DIR, 'Out_L2R/Listwise/')
 
     debug = True  # with a debug mode, we can make a quick test, e.g., check whether the model can operate or not
 

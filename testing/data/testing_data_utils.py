@@ -9,6 +9,9 @@ import os
 from ptranking.data.data_utils import LTRDataset, YAHOO_LTR, ISTELLA_LTR
 import torch
 
+from ptranking.utils import settings
+
+
 def get_doc_num(dataset):
     ''' compute the number of documents in a dataset '''
     doc_num = 0
@@ -215,8 +218,8 @@ if __name__ == '__main__':
     #check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
 
     data_id  = 'MQ2007_List'
-    dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../dataset/MQ2007-list/')))
-    path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), "../../dataset/MQ2007-list/")))
+    dir_data = os.path.join(settings.DATASET_DIR, 'MQ2007-list/')
+    path = os.path.join(settings.DATASET_DIR, 'MQ2007-list/')
     print("loading from" + path)
     check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
     '''
@@ -231,7 +234,7 @@ if __name__ == '__main__':
     '''
 
     data_id  = 'MQ2008_List'
-    dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../dataset/MQ2008-list/')))
+    dir_data = os.path.join(settings.DATASET_DIR, 'MQ2008-list/')
     check_dataset_statistics(data_id=data_id, dir_data=dir_data, buffer=False)
     '''
     Dataset:	 MQ2008_List

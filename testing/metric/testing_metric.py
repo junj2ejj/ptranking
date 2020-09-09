@@ -88,13 +88,13 @@ def test_kendall_tau():
 if __name__ == '__main__':
 
     #1
-    #test_ap()
+    test_ap()
 
     #2
     test_nerr()
 
     #3
-    #test_kendall_tau()
+    test_kendall_tau()
 
 
 

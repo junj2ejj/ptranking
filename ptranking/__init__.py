@@ -5,4 +5,3 @@
 
 """
 
-import ptranking as ptranking

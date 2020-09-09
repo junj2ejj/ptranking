@@ -12,6 +12,52 @@ This open-source project, referred to as **PTRanking** (Learning to Rank in PyTo
 
 # How-to-Start and Learning more
 
+### Get Started
+
+1. Prepare a virtual Python 3.8 environment via `conda`, `venv` or others and install `ptranking` (e.g. pip install ptranking)
+
+2. Install pytorch follows the instruction in https://pytorch.org/get-started/locally/
+
+### Command line usage
+
+1. 
+
+2. Run codes below in your Terminal/Command Prompt:
+
+```
+python ptranking -data [DATASETNAME] -dir_data [DATASET_DIR] -dir_output [OUTPUT_DIR] -model [MODELNAME]
+```
+
+e.g.:
+```
+python ptranking -data MQ2008_Super -dir_data /home/dl-box/dataset/MQ2008/ -dir_output /home/dl-box/WorkBench/CodeBench/Project_output/Out_L2R/Listwise/ -model ListMLE
+```
+
+python ptranking -data MQ2008_Super -dir_data /Users/jackh/PycharmProjects/ptranking/dataset/MQ2008/ -dir_output /Users/jackh/PycharmProjects/ptranking/WorkBench/CodeBench/Project_output/Out_L2R/Listwise/ -model ListMLE
+
+### Testing via example codes
+
+1. Download 4 compressed files (`MQ2007.rar`, `MQ2007-list.rar`, `MQ2008.rar` and `MQ2008-list.rar`) of LETOR 4.0 datasets from https://onedrive.live.com/?cid=8feadc23d838bda8&id=8FEADC23D838BDA8%21107&authkey=%21ACnoZZSZVfHPJd0 and uncompress them respectively under `DATASET_DIR`
+
+2. Set the Data Directories
+In `ptranking/utils/settings.py` set the `DATASET_DIR`, `PROJECT_OUTPUT_DIR` and `BENCH_OUTPUT_DIR` to different directories
+
+3. Run codes below in your Terminal/Command Prompt:
+
+```
+
+python -m testing.data.testing_data_utils
+
+python -m testing.ltr_adhoc.testing_ltr_adhoc
+
+python -m testing.ltr_adversarial.testing_ltr_adversarial
+
+python -m testing.ltr_tree.testing_ltr_tree
+
+python -m testing.metric.testing_metric
+
+```
+
 ## Demo Scripts
 
 To get a taste of learning-to-rank models without writing any code, you could try the following script. You just need to specify the model name, the dataset id, as well as the directories for input and output.
@@ -32,8 +78,15 @@ All specific learning-to-rank models inherit NeuralRanker and mainly differ in t
  where batch_preds and batch_stds correspond to outputs of the scoring function and ground-truth lables, respectively. 
  We can observe that the main work is to define the surrogate loss function.
 
+<!--
+This is for github
 ![NewLoss](./img/new_loss.png)
+-->
+<!--
+This is for pypi
+![](https://github.com/ptranking/ptranking.github.io/raw/master/img/new_loss.png)
 
+-->
 ## Parameter Setting
 
 An easy-to-use parameter setting is necessary for any ML library. PT-Ranking offers a self-contained strategy.
