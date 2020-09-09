@@ -84,13 +84,12 @@ All specific learning-to-rank models inherit NeuralRanker and mainly differ in t
 
 <!--
 This is for github
-![NewLoss](./img/new_loss.png)
 -->
+![NewLoss](./img/new_loss.png)
 <!--
 This is for pypi
--->
 ![](https://github.com/ptranking/ptranking.github.io/raw/master/img/new_loss.png)
-
+-->
 ## Parameter Setting
 
 An easy-to-use parameter setting is necessary for any ML library. PT-Ranking offers a self-contained strategy.
