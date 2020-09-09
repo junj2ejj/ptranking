@@ -48,7 +48,7 @@ if __name__ == '__main__':
 	#data_id = 'MQ2008_Super'
 
 	''' location of the adopted data '''
-	dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../WorkBench/Corpus/LETOR4.0/MQ2007/')))
+	dir_data = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../dataset/MQ2007/')))
 	#dir_data = '/home/dl-box/WorkBench/Datasets/L2R/LETOR4.0/MQ2007/'
 	#dir_data = '/Users/solar/WorkBench/Datasets/L2R/LETOR4.0/MQ2008/'
 
